@@ -887,15 +887,7 @@ $.ajaxPrefilter((options, originalOptions, xhr) => {
 });
 
 async function firstLoadInit() {
-    try {
-        const tokenResponse = await fetch('/csrf-token');
-        const tokenData = await tokenResponse.json();
-        token = tokenData.token;
-    } catch {
-        hideLoader();
-        toastr.error('Couldn\'t get CSRF token. Please refresh the page.', 'Error', { timeOut: 0, extendedTimeOut: 0, preventDuplicates: true });
-        throw new Error('Initialization failed');
-    }
+
 
     await readSecretState();
     await getSettings();
