@@ -81,7 +81,7 @@ const cliArguments = yargs(hideBin(process.argv))
         describe: `Enables CORS proxy\nIf not provided falls back to yaml config 'enableCorsProxy'.\n[config default: ${DEFAULT_CORS_PROXY}]`,
     }).option('disableCsrf', {
         type: 'boolean',
-        default: false,
+        default: true,
         describe: 'Disables CSRF protection',
     }).option('ssl', {
         type: 'boolean',

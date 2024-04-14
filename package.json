@@ -61,7 +61,7 @@
     },
     "version": "1.11.7",
     "scripts": {
-        "start": "node server.js",
+        "start": "node server.js --disableCsrf",
         "start-multi": "node server.js --disableCsrf",
         "postinstall": "node post-install.js",
         "lint": "eslint \"src/**/*.js\" \"public/**/*.js\" ./*.js",
